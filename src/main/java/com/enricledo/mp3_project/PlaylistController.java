@@ -38,13 +38,17 @@ public class PlaylistController implements Initializable {
     @FXML
     private ListView<String> LVSongs;
     @FXML
+    private ListView<String> LVPlaylists;
+    @FXML
     private Text TextPlaylistTitle;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        String[] songs = {"Dream On - Aerosmith","Demasiadas Mujeres - C.Tangana","Neverita - Bad Bunny","Bohemian Rhapsody - Queen","Smooth - Santana, Rob Thomas","Shape of You - Ed Sheeran","Imagine - John Lennon","Rolling in the Deep - Adele","Hotel California - Eagles","Billie Jean - Michael Jackson","Stairway to Heaven - Led Zeppelin","Thinking Out Loud - Ed Sheeran","Purple Haze - Jimi Hendrix","Hey Jude - The Beatles","I Want to Hold Your Hand - The Beatles","Thriller - Michael Jackson","Hotel California - Eagles","Livin' on a Prayer - Bon Jovi","Sweet Child o' Mine - Guns N' Roses","Bohemian Rhapsody - Queen","Despacito - Luis Fonsi, Daddy Yankee"};
+        String[] songs = {"Dream On - Aerosmith","Demasiadas Mujeres - C.Tangana","Neverita - Bad Bunny","Bohemian Rhapsody - Queen","Smooth - Santana, Rob Thomas","Shape of You - Ed Sheeran","Imagine - John Lennon","Rolling in the Deep - Adele","Hotel California - Eagles","Billie Jean - Michael Jackson","Stairway to Heaven - Led Zeppelin","Thinking Out Loud - Ed Sheeran","Purple Haze - Jimi Hendrix","Hey Jude - The Beatles","I Want to Hold Your Hand - The Beatles","Thriller - Michael Jackson","Hotel California - Eagles","Livin' on a Prayer - Bon Jovi","Sweet Child o' Mine - Guns N' Roses","Bohemian Rhapsody - Queen","Despacito - Luis Fonsi, Daddy Yankee","","Suggestion below:"};
         LVSongs.getItems().addAll(songs);
-        
+        String[] playlists = {"La mejor playlist","Fiesta Pedro", "Ochenteraaaa","Temones de fiesta","Raeggeton"};
+        LVPlaylists.getItems().addAll(playlists);
+    
         ContextMenu contextMenu = new ContextMenu();
         MenuItem playMenuItem = new MenuItem("Play");
         MenuItem deleteMenuItem = new MenuItem("Delete");
