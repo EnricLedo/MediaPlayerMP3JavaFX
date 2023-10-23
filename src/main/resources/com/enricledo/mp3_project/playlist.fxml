@@ -20,9 +20,6 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0" style="-fx-background-color: white;">
                <children>
                   <ImageView fx:id="IVSongImage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../Downloads/aerosmith_dreamOn.jpeg" />
-                     </image>
                      <HBox.margin>
                         <Insets bottom="10.0" left="20.0" right="5.0" top="10.0" />
                      </HBox.margin>
@@ -65,54 +62,31 @@
                   </HBox>
                   <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="470.0">
                      <children>
-                        <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Button">
+                        <ImageView fx:id="IVPrevious" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
-                              <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Button>
-                        <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Button">
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="IVBackward" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
-                              <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Button>
-                        <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Button">
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="IVPlayPause" fitHeight="60.0" fitWidth="60.0" onMouseClicked="#playToPause" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
-                              <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Button>
-                        <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Button">
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="IVForward" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
-                              <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Button>
-                        <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Button">
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="IVNext" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
-                              <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Button>
-                        <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Button">
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></ImageView>
+                        <CheckBox mnemonicParsing="false" text="Random Order">
                            <HBox.margin>
-                              <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets left="15.0" right="10.0" />
                            </HBox.margin>
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Button>
+                        </CheckBox>
                      </children>
                   </HBox>
                </children>
@@ -128,13 +102,13 @@
    <left>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.0" BorderPane.alignment="CENTER">
          <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Add playlist">
+            <Button fx:id="BTNAddPlaylist" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Add playlist">
                <VBox.margin>
                   <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                </VBox.margin>
             </Button>
             <ListView fx:id="LVPlaylists" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Added songs">
+            <Button fx:id="BTNAddedSongs" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Added songs">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                </VBox.margin>
@@ -148,26 +122,55 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <ImageView fx:id="IVPlaylistImage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../Downloads/aerosmith_dreamOn.jpeg" />
-                     </image>
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Text fx:id="TextPlaylistTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Temones de rock">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Text>
-                  <Button maxHeight="40.0" minHeight="40.0" mnemonicParsing="false" text="Play playlist">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                  </Button>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text fx:id="TextPlaylistTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Default Title 1">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox fx:id="CBMood" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <TextField fx:id="TFChangeTitle">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="BTNAddSong" mnemonicParsing="false" text="Add Song">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="BTNPlayPlaylist" mnemonicParsing="false" text="Play">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="BTNSave" mnemonicParsing="false" text="Save">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
                </children>
             </HBox>
             <ListView fx:id="LVSongs" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
